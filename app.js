@@ -3,14 +3,12 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
-const dotenv = require("dotenv");
 const helmet = require("helmet");
 const { logger } = require("./middleware/logger");
 const toursRouter = require("./routes/toursRoutes");
 
 //Configuration
 
-dotenv.config();
 const app = express();
 
 //Middlewares
@@ -30,9 +28,4 @@ app.route("/").get((req, res) => {
 
 app.use("/tours", toursRouter);
 
-//Server setup
-const port = process.env.PORT || 6000;
-app.listen(port, () => {
-  console.log(process.env);
-  console.log(`Listening on port ${port}`);
-});
+module.exports = app;
