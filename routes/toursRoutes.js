@@ -5,12 +5,20 @@ const {
   createTour,
   updateTourById,
   deleteTour,
+  topFiveAlias,
+  getToursStats,
 } = require("../controllers/toursController");
 
 const router = express.Router();
 
 //Get all users
 router.get("/", getAllTours);
+
+//Get Tour Stats
+router.get("/stats", getToursStats);
+
+//Get top five tours (aliasing)
+router.get("/topFive", topFiveAlias, getAllTours);
 
 //Get Tour by Id
 router.get("/:id", getTourById);

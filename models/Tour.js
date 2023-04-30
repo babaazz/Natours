@@ -12,11 +12,11 @@ const toursSchema = mongoose.Schema(
       type: Number,
       required: [true, "A Tour must have certain duration"],
     },
-    ratingAverage: {
+    ratingsAverage: {
       type: Number,
       default: 4.8,
     },
-    ratingQuantity: {
+    ratingsQuantity: {
       type: Number,
       default: 0,
     },
