@@ -7,6 +7,7 @@ const {
   deleteTour,
   topFiveAlias,
   getToursStats,
+  getMonthlyStats,
 } = require("../controllers/toursController");
 
 const router = express.Router();
@@ -16,6 +17,9 @@ router.get("/", getAllTours);
 
 //Get Tour Stats
 router.get("/stats", getToursStats);
+
+//Get Monthly Stats
+router.get("/getMonthlyStats/:year", getMonthlyStats);
 
 //Get top five tours (aliasing)
 router.get("/topFive", topFiveAlias, getAllTours);
