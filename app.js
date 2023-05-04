@@ -4,8 +4,13 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
 const helmet = require("helmet");
+
 const { logger } = require("./middleware/logger");
+
 const toursRouter = require("./routes/toursRoutes");
+
+const AppError = require("./utils/appError");
+const globalErrorHandler = require("./middleware/globalErrorHandler");
 
 //Configuration
 
@@ -22,10 +27,14 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
-app.route("/").get((req, res) => {
-  res.status(200).send("Hello world");
+//Routes
+app.use("/api/v1/tours", toursRouter);
+app.all("*", (req, res, next) => {
+  const err = new AppError(`Can't find ${req.originalUrl} on this server`, 404);
+  next(err);
 });
 
-app.use("/tours", toursRouter);
+//Global Error Handling Middleware
+app.use(globalErrorHandler);
 
 module.exports = app;
