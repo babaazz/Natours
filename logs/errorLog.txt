@@ -43,3 +43,14 @@
 20230504	23:56:22	6ac5e9e3-4ba0-44e3-bb06-4aff45d37143	500	 Validation failed: difficulty: `whatever` is not a valid enum value for path `difficulty`., ratingsAverage: Path `ratingsAverage` (7) is more than maximum allowed value (5).
 20230504	23:57:08	1f311923-889a-4e9f-b5bd-b643ac779c72	500	 Validation failed: difficulty: `whatever` is not a valid enum value for path `difficulty`., ratingsAverage: Path `ratingsAverage` (7) is more than maximum allowed value (5).
 20230504	23:57:50	82c04f96-5c3a-4998-b147-199085fbdb54	500	 Validation failed: difficulty: `whatever` is not a valid enum value for path `difficulty`., ratingsAverage: Path `ratingsAverage` (7) is more than maximum allowed value (5).
+20230505	18:03:19	46c94af2-db3a-4394-b1a3-9d9f73d2647a	500	 user validation failed: confirmPassword: Password doesn't match
+20230505	18:05:25	8b9e52c5-7c27-40e2-b6af-cdcd5f7141db	500	 user validation failed: email: Path `email` is invalid (xxxxxmail.com).
+20230505	18:14:00	6d69a0ba-412a-4149-ae04-f7cc6b729d6a	500	 user validation failed: email: Please provide a valid email
+20230506	16:20:20	7456b28b-b5cc-4600-9022-e69fce92a71f	404	 Can't find /api/v1/users/ on this server
+20230506	19:24:04	95bb1305-8743-4e6a-8cd8-3943d961c140	404	 Can't find /api/v1/users/ on this server
+20230506	19:24:34	58378f92-30e3-41f8-ab62-ac772a820978	404	 Can't find /api/v1/users/ on this server
+20230506	19:24:45	00e55309-2551-47e6-8e48-50f464c2a2ea	404	 Can't find /api/v1/users/ on this server
+20230506	19:25:54	36c12a31-b2e0-4643-8c78-459df9c2fe9a	500	 this.isModified is not a function
+20230507	12:16:24	7deb6403-37dd-43ef-8127-fb4fd4f5f421	500	 Cannot read properties of null (reading 'passwordIsMatched')
+20230507	12:17:47	3544b6aa-5a71-4d55-b955-378bfc00e49e	500	 Cannot read properties of null (reading 'passwordIsMatched')
+20230507	12:25:45	80cf2544-426d-494f-a71e-5ac1912d68da	401	 Email or password is incorrect

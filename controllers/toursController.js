@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Tour = require("../models/Tour");
 const APIFeatures = require("../utils/apiFeatures");
 const AppError = require("../utils/appError");

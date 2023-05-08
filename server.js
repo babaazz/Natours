@@ -24,7 +24,12 @@ mongoose
     app.listen(port, () => {
       console.log(`Listening on port ${port}`);
     });
-  })
-  .catch((err) => {
-    console.log(`Not connected ${err.message}`);
   });
+
+process.on("unhandledRejection", (err) => {
+  console.error(err.name, err.message);
+});
+
+process.on("uncaughtException", (err) => {
+  console.error(err.name, err.message);
+});

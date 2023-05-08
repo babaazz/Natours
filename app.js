@@ -5,12 +5,13 @@ const cors = require("cors");
 const path = require("path");
 const helmet = require("helmet");
 
-const { logger } = require("./middleware/logger");
+const { logger } = require("./middlewares/logger");
 
 const toursRouter = require("./routes/toursRoutes");
+const usersRouter = require("./routes/usersRoutes");
 
 const AppError = require("./utils/appError");
-const globalErrorHandler = require("./middleware/globalErrorHandler");
+const globalErrorHandler = require("./middlewares/globalErrorHandler");
 
 //Configuration
 
@@ -28,7 +29,13 @@ app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 //Routes
+//Tours Routes
 app.use("/api/v1/tours", toursRouter);
+
+//User Routes
+app.use("/api/v1/users", usersRouter);
+
+//Unhandled Routes
 app.all("*", (req, res, next) => {
   const err = new AppError(`Can't find ${req.originalUrl} on this server`, 404);
   next(err);
