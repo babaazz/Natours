@@ -9,14 +9,16 @@ const createJwtToken = (payLoad) => {
   });
 };
 
-const SignUp = catchAsync(async (req, res) => {
-  const { name, email, password, confirmPassword, photo } = req.body;
+const SignUp = catchAsync(async (req, res, next) => {
+  const { name, email, password, confirmPassword, photo, passwordChangedAt } =
+    req.body;
   const newUser = await User.create({
     name,
     email,
     password,
     confirmPassword,
     photo,
+    passwordChangedAt,
   });
   const accessToken = createJwtToken({ id: newUser._id });
   newUser.password = undefined;
@@ -30,7 +32,7 @@ const SignUp = catchAsync(async (req, res) => {
   });
 });
 
-const signIn = catchAsync(async (req, res) => {
+const signIn = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !password) {

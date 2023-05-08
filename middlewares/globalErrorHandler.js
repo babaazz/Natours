@@ -35,12 +35,19 @@ const sendErrorProd = (err, res) => {
       message: err.message,
     });
   } else {
+    console.log(err);
     res.status(500).json({
       status: "fail",
       message: "Opps something went wrong",
     });
   }
 };
+
+const handleTokenExpiredErr = () =>
+  new AppError("Loging Expired!! Please login again", 401);
+
+const handleInvalidTokenErr = () =>
+  new AppError("Invalid Token !! Please login again", 401);
 
 module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
@@ -57,6 +64,8 @@ module.exports = (err, req, res, next) => {
     if (error.name === "CastError") error = handleDBCastErr(error);
     if (error.code === 11000) error = handleDuplicateErr(error);
     if (error.name === "ValidationError") error = handeleValidationErr(error);
+    if (error.name === "JsonWebTokenError") error = handleInvalidTokenErr();
+    if (error.name === "TokenExpiredError") error = handleTokenExpiredErr();
     sendErrorProd(error, res);
   }
 };

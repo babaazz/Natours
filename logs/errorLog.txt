@@ -54,3 +54,26 @@
 20230507	12:16:24	7deb6403-37dd-43ef-8127-fb4fd4f5f421	500	 Cannot read properties of null (reading 'passwordIsMatched')
 20230507	12:17:47	3544b6aa-5a71-4d55-b955-378bfc00e49e	500	 Cannot read properties of null (reading 'passwordIsMatched')
 20230507	12:25:45	80cf2544-426d-494f-a71e-5ac1912d68da	401	 Email or password is incorrect
+20230508	15:38:40	47327a65-bb61-4157-bdf2-aa7d3be03f0a	401	 User not logged in.
+20230508	15:38:57	f6698700-8b4a-4752-90a6-49b83aea0e84	401	 Email or password is incorrect
+20230508	15:39:11	a76b9f10-1780-42f5-baee-1e4d6e74f6a0	404	 Can't find /api/v1/users/signIn on this server
+20230508	16:37:24	0ea9f79b-fa56-4e45-a30f-0f0d8d1ae580	500	 jwt expired
+20230508	16:38:10	8c97e70d-923a-4acb-bb52-69c113d4b90c	404	 Can't find /api/v1/users/signIn on this server
+20230508	16:41:58	c17af571-5f3e-455b-bf88-aa5cf53ee248	404	 Can't find /api/v1/users/signIn on this server
+20230508	16:50:45	2315c47f-3b56-4dfb-a035-f3f7a4a99a36	500	 invalid signature
+20230508	16:52:06	5936c454-7852-409c-ab4a-e4cf7b4e608f	500	 jwt expired
+20230508	17:29:42	7223f718-2b4b-46b2-b912-44ed780141b3	500	 invalid signature
+20230508	17:46:14	40ff8a66-d3d5-4de3-a800-10b421047572	500	 jwt expired
+20230508	17:48:59	51fa81cb-da14-43ae-aa84-a194145f5115	500	 jwt expired
+20230508	17:50:14	ed195f8d-958e-4483-af25-bc789fc06a35	500	 invalid signature
+20230508	18:43:35	6361be0c-a672-4284-b282-6f0553367ed7	400	 Unexpected token } in JSON at position 202
+20230508	18:44:57	28a1e353-8f2f-44f9-b87b-af954e90646f	400	 Unexpected token } in JSON at position 202
+20230508	18:45:32	44716cd5-4e8a-4559-bacd-5f4985038860	400	 Unexpected token } in JSON at position 202
+20230508	18:47:03	02289c01-116b-45ef-94cc-fd2edf73f717	400	 Unexpected token } in JSON at position 202
+20230508	18:56:18	3df09d9e-8e70-4b21-abba-78f5703ef42b	500	 invalid signature
+20230508	18:58:50	add537ab-610c-47bb-95ba-e0cf8cf2057c	500	 Cannot read properties of undefined (reading 'getTime')
+20230508	19:01:04	4e794f58-4cad-49dc-aa49-bd2301b00384	500	 passwordChangedAt is not defined
+20230508	19:01:45	52ad8875-4087-44c6-914b-343a2d4d891b	500	 jwt expired
+20230508	19:06:38	fd47463a-4186-4a26-9907-c3ae06685d5b	401	 Password has been changed since last login. Please login with new password
+20230508	19:08:32	b76e6f5b-6665-4b04-8e8d-40bbcd2b614c	500	 jwt expired
+20230508	19:08:44	8fc33b2e-bf86-4f97-b949-84c7b7201066	401	 Email or password is incorrect

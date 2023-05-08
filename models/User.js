@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const { JsonWebTokenError } = require("jsonwebtoken");
 
 const userSchema = mongoose.Schema({
   name: {
@@ -38,6 +39,7 @@ const userSchema = mongoose.Schema({
       message: "Password doesn't match",
     },
   },
+  passwordChangedAt: Date,
 });
 
 userSchema.methods.passwordIsMatched = async function (
@@ -45,6 +47,14 @@ userSchema.methods.passwordIsMatched = async function (
   userPassword
 ) {
   return await bcrypt.compare(inputPassword, userPassword);
+};
+
+userSchema.methods.isPasswordChangedAfterLastLogin = function (jwtTimeStamp) {
+  if (this.passwordChangedAt) {
+    const passwordChangedAt = parseInt(this.passwordChangedAt.getTime() / 1000);
+    return passwordChangedAt < jwtTimeStamp;
+  }
+  return false;
 };
 
 userSchema.pre("save", async function (next) {
