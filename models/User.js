@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const { JsonWebTokenError } = require("jsonwebtoken");
+const crypto = require("crypto");
 
 const userSchema = mongoose.Schema({
   name: {
@@ -19,9 +19,11 @@ const userSchema = mongoose.Schema({
       message: "Please provide a valid email",
     },
   },
-  photo: {
+  photo: String,
+  role: {
     type: String,
-    required: true,
+    enum: ["user", "guide", "lead-guide", "admin"],
+    default: "user",
   },
   password: {
     type: String,
@@ -40,6 +42,8 @@ const userSchema = mongoose.Schema({
     },
   },
   passwordChangedAt: Date,
+  passwordResetToken: String,
+  passwordResetTokenExpires: Date,
 });
 
 userSchema.methods.passwordIsMatched = async function (
@@ -52,10 +56,28 @@ userSchema.methods.passwordIsMatched = async function (
 userSchema.methods.isPasswordChangedAfterLastLogin = function (jwtTimeStamp) {
   if (this.passwordChangedAt) {
     const passwordChangedAt = parseInt(this.passwordChangedAt.getTime() / 1000);
-    return passwordChangedAt < jwtTimeStamp;
+    return passwordChangedAt > jwtTimeStamp;
   }
   return false;
 };
+
+userSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
+
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
+
+  this.passwordResetTokenExpires = Date.now() + 10 * 60 * 1000;
+  return resetToken;
+};
+
+userSchema.pre("save", function (next) {
+  if (!this.isModified("password") || this.isNew) return next();
+  this.passwordChangedAt = Date.now();
+  next();
+});
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();

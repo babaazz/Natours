@@ -77,3 +77,38 @@
 20230508	19:06:38	fd47463a-4186-4a26-9907-c3ae06685d5b	401	 Password has been changed since last login. Please login with new password
 20230508	19:08:32	b76e6f5b-6665-4b04-8e8d-40bbcd2b614c	500	 jwt expired
 20230508	19:08:44	8fc33b2e-bf86-4f97-b949-84c7b7201066	401	 Email or password is incorrect
+20230508	19:17:14	61a2eed0-07d2-4ea5-b596-7f18c3bfd75c	500	 jwt expired
+20230508	19:18:58	f987336d-ce17-4865-bd0c-c319dee388f9	401	 Password has been changed since last login. Please login with new password
+20230508	22:36:06	59c57db7-6e38-4458-9718-bda6368f60b5	401	 User not logged in.
+20230508	22:37:32	c9618f96-2646-4faa-94d7-da844fc48b42	403	 You don't have permission to perform this action
+20230510	15:19:02	cd01a10f-6ec9-49b9-9e4c-0074cc1db6f1	500	 user validation failed: confirmPassword: Path `confirmPassword` is required.
+20230510	15:23:23	ee8ddf08-d53e-4a11-b1f6-f475669178cf	404	 There is no user with this email
+20230510	15:23:41	eaf0f980-d35f-489c-be99-dda064fc5033	400	 Please provide email
+20230515	19:15:09	3d6505e6-ea33-4b71-b4dc-76b8f627568c	500	 EMAIL_PORT is not defined
+20230516	01:47:04	69cd7547-242c-428d-a1a9-322a4bd05b39	404	 Can't find /api/v1/users/resetPassword/740b79b15bcef80d12d71ece9a95f0830dc971a6e716ad9e2dafc7c3e2e9e308%20 on this server
+20230516	01:48:15	7b370ece-284b-4e41-96cc-707208e4783b	400	 Token is invalid or expired
+20230516	01:50:12	47fd6b1d-7784-4573-86a4-c8d71ce64f8e	400	 Token is invalid or expired
+20230516	01:54:17	998da31a-92fc-4753-a576-b135b5bacb44	400	 Token is invalid or expired
+20230516	01:58:04	64bdbeed-f19c-46ed-9f76-8469af54365d	400	 Token is invalid or expired
+20230516	02:06:01	2cd86187-2456-4368-8558-238e55867279	400	 Token is invalid or expired
+20230516	02:12:25	9de3612b-b0df-43e1-83ab-581cf06208b5	403	 You don't have permission to perform this action
+20230516	02:13:36	1ab535e6-e607-44d9-a734-dc7aae2cf5e3	404	 There is no user with this email
+20230516	11:10:07	7debea56-2376-4fa3-9842-8d828c6663aa	500	 password is not defined
+20230516	11:11:05	49051953-89ae-4dce-ae02-a740572d8755	401	 Email or password is incorrect
+20230516	11:12:46	4a228011-5263-4adc-8606-335f2e9a3b8d	401	 Email or password is incorrect
+20230516	15:45:03	f05a421c-7a66-4778-9d28-5f40964706ff	500	 Expected "payload" to be a plain object.
+20230516	15:50:47	43c56d53-9ab1-447e-9cac-c7aa0198d105	500	 E11000 duplicate key error collection: natours.users index: email_1 dup key: { email: "hotGuyLaxman@gmail.com" }
+20230516	15:52:52	c3f59fd0-66f7-427c-9947-c69e716786f7	401	 User not logged in.
+20230516	15:55:19	c439575a-046e-445e-aa93-b488a177cb21	500	 jwt malformed
+20230516	16:12:11	92060e09-b9ff-4c2d-b4e4-6030e78f2cb8	500	 jwt expired
+20230516	16:12:23	2806901f-b557-453d-a1cf-3253e11bce6e	401	 Email or password is incorrect
+20230516	16:13:34	c6bb7ad6-7c8d-4bb3-aa6c-3d92f0437c57	500	 user validation failed: confirmPassword: Password doesn't match
+20230516	16:13:45	ff1cae25-eccc-4baf-8036-84731e018837	500	 jwt malformed
+20230516	16:16:56	3dabb0b9-4038-45cc-945f-1ba41c84afcc	500	 jwt malformed
+20230516	16:17:33	0c33bbe2-d054-489b-8809-00860dc740c5	401	 Email or password is incorrect
+20230516	16:18:11	0efc8f04-312e-4005-8cdf-88a982ba6804	500	 jwt malformed
+20230516	16:20:20	fd5283bc-81dd-4c14-8543-d74586d8150b	401	 Email or password is incorrect
+20230516	16:22:10	734db787-fd3b-4648-8252-c4fd9255d611	401	 Email or password is incorrect
+20230516	16:23:10	ff1dee45-37dd-4baf-83ba-5f9f7936787e	500	 jwt malformed
+20230516	17:14:40	b3c47454-63ba-4e65-adaa-360129647397	500	 user validation failed: confirmPassword: Password doesn't match
+20230516	17:14:56	9f036daf-f7af-4fcc-bd9d-43ce080ba304	500	 jwt malformed

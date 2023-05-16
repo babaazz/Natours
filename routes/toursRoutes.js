@@ -9,11 +9,18 @@ const {
   getToursStats,
   getMonthlyStats,
 } = require("../controllers/toursController");
+const verifyToken = require("../middlewares/verifyToken");
+const restrictActionTo = require("../middlewares/restrictActionTo");
 
 const router = express.Router();
 
 //Get all users
-router.get("/", getAllTours);
+router.get(
+  "/",
+  verifyToken,
+  restrictActionTo("lead-guide", "admin"),
+  getAllTours
+);
 
 //Get Tour Stats
 router.get("/stats", getToursStats);

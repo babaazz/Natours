@@ -3,7 +3,6 @@ const { promisify } = require("util");
 const jwt = require("jsonwebtoken");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
-const { decode } = require("punycode");
 
 const verifyToken = catchAsync(async (req, res, next) => {
   const authHeader = req.headers.authorization || req.headers.Authorization;
@@ -32,6 +31,8 @@ const verifyToken = catchAsync(async (req, res, next) => {
       401
     );
   }
+
+  req.user = currentUser;
 
   next();
 });

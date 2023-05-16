@@ -5,9 +5,15 @@ const verifyToken = require("../middlewares/verifyToken");
 
 const router = express.Router();
 
-router.post("/signUp", authController.SignUp);
+router.post("/signUp", authController.signUp);
 
 router.post("/signIn", authController.signIn);
+
+router.patch("/forgotPassword", authController.forgotPassword);
+
+router.patch("/resetPassword/:token", authController.resetPassword);
+
+router.patch("/updatePassword", verifyToken, authController.updatePassword);
 
 router.route("/").get(verifyToken, usersController.getAllUsers);
 
