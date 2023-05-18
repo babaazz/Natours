@@ -112,3 +112,7 @@
 20230516	16:23:10	ff1dee45-37dd-4baf-83ba-5f9f7936787e	500	 jwt malformed
 20230516	17:14:40	b3c47454-63ba-4e65-adaa-360129647397	500	 user validation failed: confirmPassword: Password doesn't match
 20230516	17:14:56	9f036daf-f7af-4fcc-bd9d-43ce080ba304	500	 jwt malformed
+20230517	13:04:14	82dbb20a-ebac-46e5-a818-ff0a784ce7e1	500	 user validation failed: role: `sevak` is not a valid enum value for path `role`.
+20230518	17:45:54	427085f1-a0bf-4b07-b4d1-d5d2560f07e6	401	 User not logged in.
+20230518	17:47:15	6aeadfda-d9d5-4c4a-b4e9-90d08a4f6314	500	 name is not defined
+20230518	17:56:25	64b52ddf-e671-4571-9fa1-3b00d3b50017	400	 This isn't route for password change
