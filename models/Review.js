@@ -15,15 +15,15 @@ const reviewsSchema = new mongoose.Schema(
     tour: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "tour",
-      required: true,
+      required: [true, "review must belong to a tour"],
     },
     user: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "user",
-      required: true,
+      required: [true, "review must belong to a tour"],
     },
   },
-  { timeStamps: true }
+  { timeStamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
 const Review = mongoose.model("review", reviewsSchema);
