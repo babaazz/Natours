@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const slugify = require("slugify");
+const User = require("./User");
 
-const toursSchema = mongoose.Schema(
+const toursSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -25,8 +26,8 @@ const toursSchema = mongoose.Schema(
     },
     difficulty: {
       type: String,
-      enum: ["Easy", "Medium", "Hard", "Extreme"],
-      default: "Easy",
+      enum: ["easy", "medium", "difficult", "extreme"],
+      default: "easy",
     },
     price: {
       type: Number,
@@ -36,6 +37,34 @@ const toursSchema = mongoose.Schema(
       type: Number,
       required: [true, "A tour must have group size limit"],
     },
+    startLocation: {
+      description: String,
+      type: {
+        type: String,
+        enum: ["Point"],
+        default: "Point",
+      },
+      coordinates: [Number],
+      address: String,
+    },
+    locations: [
+      {
+        description: String,
+        type: {
+          type: String,
+          enum: ["Point"],
+          default: "Point",
+        },
+        coordinates: [Number],
+        day: Number,
+      },
+    ],
+    guides: [
+      {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "user",
+      },
+    ],
     priceDiscount: Number,
     secretTour: Boolean,
     summary: {
@@ -67,8 +96,22 @@ toursSchema.pre("save", function (next) {
   next();
 });
 
+toursSchema.pre("save", async function (next) {
+  const guidesPromises = this.guides.map(async (id) => await User.findById(id));
+  this.guides = await Promise.all(guidesPromises);
+  next();
+});
+
 toursSchema.pre(/^find/, function (next) {
   this.find({ secretTour: { $ne: true } });
+  next();
+});
+
+toursSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "guides",
+    select: "-__v -passwordChangedAt",
+  });
   next();
 });
 

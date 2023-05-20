@@ -17,6 +17,8 @@ router.patch("/updatePassword", verifyToken, authController.updatePassword);
 
 router.patch("/updateMe", verifyToken, usersController.updateMe);
 
+router.delete("/deleteMe", verifyToken, usersController.deleteMe);
+
 router.route("/").get(verifyToken, usersController.getAllUsers);
 
 router

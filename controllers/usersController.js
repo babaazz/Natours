@@ -28,14 +28,21 @@ const updateMe = catchAsync(async (req, res, next) => {
   });
 });
 
-const getAllUsers = (req, res) => {
+const deleteMe = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.user.id, { active: false });
+
+  res.sendStatus(204);
+});
+
+const getAllUsers = catchAsync(async (req, res) => {
+  const users = await User.find();
   res.status(200).json({
     status: "Success",
     data: {
-      message: "This route is under construction",
+      users,
     },
   });
-};
+});
 
 const getUserById = (req, res) => {
   res.status(200).json({
@@ -64,4 +71,11 @@ const deleteUser = (req, res) => {
   });
 };
 
-module.exports = { getAllUsers, getUserById, updateUser, deleteUser, updateMe };
+module.exports = {
+  getAllUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
+  updateMe,
+  deleteMe,
+};

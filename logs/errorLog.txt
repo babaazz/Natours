@@ -116,3 +116,12 @@
 20230518	17:45:54	427085f1-a0bf-4b07-b4d1-d5d2560f07e6	401	 User not logged in.
 20230518	17:47:15	6aeadfda-d9d5-4c4a-b4e9-90d08a4f6314	500	 name is not defined
 20230518	17:56:25	64b52ddf-e671-4571-9fa1-3b00d3b50017	400	 This isn't route for password change
+20230518	18:09:46	ff7b61b6-4a11-452d-b449-06457b01c929	401	 Email or password is incorrect
+20230518	18:26:28	be7f2f18-8d05-484a-a72a-900f27ac142c	500	 jwt expired
+20230518	18:26:36	e6b0e846-54f2-4772-8e22-2472159af2bb	401	 Email or password is incorrect
+20230518	23:15:50	0f26fa09-bf00-4998-a949-ee0067dda946	500	 Cast to string failed for value "{}" (type Object) at path "email" for model "user"
+20230519	04:04:32	6f671ac2-6e9c-4ddd-893d-2214547ce0ab	500	 this.queryStr.sort.replace is not a function
+20230519	23:44:20	a25b8878-5822-4146-ab2d-4bdfd24c9b57	500	 jwt expired
+20230519	23:46:12	3f9375a8-a520-47ca-a276-3ffb8d90135c	500	 tour validation failed: difficulty: `Medium` is not a valid enum value for path `difficulty`.
+20230520	00:07:23	d66b83ad-ca3b-45c1-a901-bd9b5fd79b05	500	 connection timed out
+20230520	11:05:18	55e8fd98-39b9-4d79-9bfe-8aa652960117	404	 No tour found with id 64685b13164bc8848cd9464c!!

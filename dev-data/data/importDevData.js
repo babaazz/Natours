@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const Tour = require("../../models/Tour");
 
 dotenv.config();
+console.log(process.env.DATABASE_URI);
 
 //Config
 
@@ -14,7 +15,7 @@ const dbUri = process.env.DATABASE_URI.replace(
 );
 
 const data = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "tours-simple.json"), "utf-8")
+  fs.readFileSync(path.join(__dirname, "tours.json"), "utf-8")
 );
 
 const addDataToDB = async () => {
