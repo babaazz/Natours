@@ -9,18 +9,17 @@ const {
   getToursStats,
   getMonthlyStats,
 } = require("../controllers/toursController");
+const reviewsRouter = require("./reviewsRoutes");
 const verifyToken = require("../middlewares/verifyToken");
 const restrictActionTo = require("../middlewares/restrictActionTo");
 
 const router = express.Router();
 
+//Re-route review urls to review router
+router.use("/:tourId/reviews", reviewsRouter);
+
 //Get all users
-router.get(
-  "/",
-  verifyToken,
-  restrictActionTo("lead-guide", "admin"),
-  getAllTours
-);
+router.get("/", verifyToken, getAllTours);
 
 //Get Tour Stats
 router.get("/stats", getToursStats);
@@ -35,7 +34,12 @@ router.get("/topFive", topFiveAlias, getAllTours);
 router.get("/:id", getTourById);
 
 //Create New Tour
-router.post("/", createTour);
+router.post(
+  "/",
+  verifyToken,
+  restrictActionTo("lead-guide", "admin"),
+  createTour
+);
 
 //Update Tour
 router.patch("/:id", updateTourById);

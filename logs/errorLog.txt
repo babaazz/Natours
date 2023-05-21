@@ -125,3 +125,10 @@
 20230519	23:46:12	3f9375a8-a520-47ca-a276-3ffb8d90135c	500	 tour validation failed: difficulty: `Medium` is not a valid enum value for path `difficulty`.
 20230520	00:07:23	d66b83ad-ca3b-45c1-a901-bd9b5fd79b05	500	 connection timed out
 20230520	11:05:18	55e8fd98-39b9-4d79-9bfe-8aa652960117	404	 No tour found with id 64685b13164bc8848cd9464c!!
+20230520	15:55:36	3a0e3cb3-1e3e-4f54-907b-8feb5a872b61	500	 jwt expired
+20230520	15:57:52	044d5419-a41e-430f-8bb3-a6e26e3e1cba	400	 Expected double-quoted property name in JSON at position 172
+20230520	15:58:03	55ea7591-b637-4c7b-bf0c-9d9b4d8afc6e	401	 User not logged in.
+20230520	15:58:26	09224ff9-4b88-434a-b0d9-1c6115727351	403	 You don't have permission to perform this action
+20230520	23:01:02	a71b3a76-5bc1-4498-a3ec-1325314b9d6b	403	 You don't have permission to perform this action
+20230520	23:06:32	176e5ddf-af67-41ce-814d-6dff960ff8a9	404	 No tour found with id 5c88fa8cf4afda39709c295f!!
+20230521	12:41:11	d310f91f-a8e2-4ac7-bd5a-26a66a6966de	400	 Expected double-quoted property name in JSON at position 59

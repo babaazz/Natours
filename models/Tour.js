@@ -91,6 +91,12 @@ toursSchema.virtual("durationWeeks").get(function () {
   return `${Math.floor(this.duration / 7)} weeks and ${this.duration % 7} days`;
 });
 
+toursSchema.virtual("reviews", {
+  ref: "review",
+  localField: "_id",
+  foreignField: "tour",
+});
+
 toursSchema.pre("save", function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();

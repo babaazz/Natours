@@ -13,6 +13,7 @@ const { logger } = require("./middlewares/logger");
 
 const toursRouter = require("./routes/toursRoutes");
 const usersRouter = require("./routes/usersRoutes");
+const reviewsRouter = require("./routes/reviewsRoutes");
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
@@ -75,6 +76,9 @@ app.use("/api/v1/tours", toursRouter);
 
 //User Routes
 app.use("/api/v1/users", usersRouter);
+
+//Reviews Routes
+app.use("/api/v1/reviews", reviewsRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {
