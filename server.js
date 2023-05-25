@@ -5,11 +5,15 @@ const app = require("./app");
 dotenv.config();
 
 //Config
+//For Mongo Atlas connection
+// const dbUri = process.env.DATABASE_URI.replace(
+//   "<password>",
+//   process.env.DATABASE_PASSWORD
+// );
 
-const dbUri = process.env.DATABASE_URI.replace(
-  "<password>",
-  process.env.DATABASE_PASSWORD
-);
+//For Local Database connection
+const dbUri = process.env.LOCAL_DATABASE_URI;
+
 const port = process.env.PORT || 6000;
 
 //Database Connection

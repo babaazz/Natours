@@ -3,24 +3,38 @@ const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Tour = require("../../models/Tour");
+const User = require("../../models/User");
+const Review = require("../../models/Review");
 
 dotenv.config();
-console.log(process.env.DATABASE_URI);
 
 //Config
+//For Mongo Atlas Connection
+// const dbUri = process.env.DATABASE_URI.replace(
+//   "<password>",
+//   process.env.DATABASE_PASSWORD
+// );
 
-const dbUri = process.env.DATABASE_URI.replace(
-  "<password>",
-  process.env.DATABASE_PASSWORD
+//For Local Database connection
+const dbUri = process.env.LOCAL_DATABASE_URI;
+
+const tours = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "tours.json"), "utf-8")
 );
 
-const data = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "tours.json"), "utf-8")
+const users = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "users.json"), "utf-8")
+);
+
+const reviews = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "reviews.json"), "utf-8")
 );
 
 const addDataToDB = async () => {
   try {
-    await Tour.create(data);
+    await Tour.create(tours);
+    await User.create(users, { validateBeforeSave: false });
+    await Review.create(reviews);
     console.log("Data succesfully loaded");
   } catch (error) {
     console.error(error.message);
@@ -30,6 +44,8 @@ const addDataToDB = async () => {
 const deleteData = async () => {
   try {
     await Tour.deleteMany();
+    await User.deleteMany();
+    await Review.deleteMany();
     console.log("Data deleted");
   } catch (error) {
     console.error(error.message);

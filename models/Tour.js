@@ -17,8 +17,10 @@ const toursSchema = new mongoose.Schema(
     },
     ratingsAverage: {
       type: Number,
-      default: 4.8,
-      max: 5,
+      default: 4.5,
+      min: [1, "Rating must be above 1"],
+      max: [5, "Rating must be below 5"],
+      set: (val) => Math.round(val * 10) / 10,
     },
     ratingsQuantity: {
       type: Number,
@@ -26,7 +28,10 @@ const toursSchema = new mongoose.Schema(
     },
     difficulty: {
       type: String,
-      enum: ["easy", "medium", "difficult", "extreme"],
+      enum: {
+        values: ["easy", "medium", "difficult"],
+        message: "Difficulty is either easy, medium or difficult",
+      },
       default: "easy",
     },
     price: {
@@ -87,6 +92,10 @@ const toursSchema = new mongoose.Schema(
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
+toursSchema.index({ price: 1, ratingsAverage: -1 });
+toursSchema.index({ slug: 1 });
+toursSchema.index({ startLocation: "2dsphere" });
+
 toursSchema.virtual("durationWeeks").get(function () {
   return `${Math.floor(this.duration / 7)} weeks and ${this.duration % 7} days`;
 });
@@ -121,10 +130,10 @@ toursSchema.pre(/^find/, function (next) {
   next();
 });
 
-toursSchema.pre("aggregate", function (next) {
-  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
-  next();
-});
+// toursSchema.pre("aggregate", function (next) {
+//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+//   next();
+// });
 
 const Tour = mongoose.model("tour", toursSchema);
 

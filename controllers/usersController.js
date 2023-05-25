@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const controllersFactory = require("./controllersFactory");
 
 const filterObj = (obj, ...allowedFields) => {
   const filteredObj = {};
@@ -8,6 +9,11 @@ const filterObj = (obj, ...allowedFields) => {
     if (allowedFields.includes(el)) filteredObj[el] = obj[el];
   });
   return filteredObj;
+};
+
+const getMe = (req, res, next) => {
+  req.params.id = req.user.id;
+  next();
 };
 
 const updateMe = catchAsync(async (req, res, next) => {
@@ -34,48 +40,23 @@ const deleteMe = catchAsync(async (req, res, next) => {
   res.sendStatus(204);
 });
 
-const getAllUsers = catchAsync(async (req, res) => {
-  const users = await User.find();
-  res.status(200).json({
-    status: "Success",
-    data: {
-      users,
-    },
-  });
-});
+const createUser = controllersFactory.createOne(User);
 
-const getUserById = (req, res) => {
-  res.status(200).json({
-    status: "Success",
-    data: {
-      message: "This route is under construction",
-    },
-  });
-};
+const getAllUsers = controllersFactory.getAll(User);
 
-const updateUser = (req, res) => {
-  res.status(200).json({
-    status: "Success",
-    data: {
-      message: "This route is under construction",
-    },
-  });
-};
+const getUser = controllersFactory.getOne(User);
 
-const deleteUser = (req, res) => {
-  res.status(200).json({
-    status: "Success",
-    data: {
-      message: "This route is under construction",
-    },
-  });
-};
+const updateUser = controllersFactory.updateOne(User);
+
+const deleteUser = controllersFactory.deleteOne(User);
 
 module.exports = {
   getAllUsers,
-  getUserById,
+  getUser,
   updateUser,
   deleteUser,
+  createUser,
+  getMe,
   updateMe,
   deleteMe,
 };

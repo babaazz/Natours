@@ -132,3 +132,44 @@
 20230520	23:01:02	a71b3a76-5bc1-4498-a3ec-1325314b9d6b	403	 You don't have permission to perform this action
 20230520	23:06:32	176e5ddf-af67-41ce-814d-6dff960ff8a9	404	 No tour found with id 5c88fa8cf4afda39709c295f!!
 20230521	12:41:11	d310f91f-a8e2-4ac7-bd5a-26a66a6966de	400	 Expected double-quoted property name in JSON at position 59
+20230521	14:49:06	9f4ff479-e8cf-4850-aef2-6e89d68075eb	401	 User not logged in.
+20230521	14:52:18	4df05d28-3abb-4cec-89c7-a8b5f6571e3a	500	 Tour is not defined
+20230521	15:52:19	2c4907b9-aaac-4592-9283-4999bf201e47	404	 Can't find /api/v1/review on this server
+20230521	15:53:06	74d677d4-eae1-4f05-bef3-b8e492941d2e	404	 Can't find /api/v1/review/6468a12606a8a10d11b36561 on this server
+20230521	16:01:55	db935ad3-c98f-405b-b8ad-dd75e3d93d8f	401	 User not logged in.
+20230521	17:39:13	8622de35-b903-450c-8b4a-1385b7eba0df	404	 No document found with id 644df5c9741af3e6e319a47a!!
+20230521	19:00:09	972b7078-85d4-4353-82c6-a7958493cb61	401	 User not logged in.
+20230521	19:07:50	ec741231-b367-4288-b3d8-7ff230418663	403	 You don't have permission to perform this action
+20230522	10:49:46	a01d5048-1952-4986-b703-7f53fcfed724	403	 You don't have permission to perform this action
+20230522	14:07:18	31e9dbc9-498d-4593-a9a4-b18fe864a06f	401	 User not logged in.
+20230522	14:09:31	851cea7c-dbed-44ec-9b04-fc0640e32741	401	 User not logged in.
+20230522	17:35:04	a1dcabf6-b5ae-4d78-b5a4-3c7ffa4cc46f	403	 You don't have permission to perform this action
+20230523	00:16:15	c8b6b1d5-f588-4ec4-bb73-5d7a4e8d4b8c	401	 Email or password is incorrect
+20230523	00:17:57	d59e26ef-08ad-4d12-83bf-0c308d19b8bd	401	 Email or password is incorrect
+20230523	09:00:57	4b4b31de-822b-4d9e-86eb-213b847edbad	500	 jwt expired
+20230523	13:49:38	bf1cdf96-14f5-4718-b159-d7c8b4e2aedf	500	 jwt expired
+20230523	14:13:09	b554f540-a2bf-40ae-9b8f-e7052f803b7f	500	 jwt expired
+20230523	14:24:57	9630bbb9-37ca-4457-bca6-874b0f107701	403	 You don't have permission to perform this action
+20230523	14:47:18	2fe4eb90-46a5-4403-ad47-da1339058edd	500	 jwt expired
+20230523	14:49:39	8d56081e-b8f2-416b-99d7-de8646cd4b24	403	 You don't have permission to perform this action
+20230523	14:50:33	eafd6ef9-0a15-4785-b575-091b89bb2516	404	 No document found with id 646c7f3a1fa66895c31c8357!!
+20230523	17:18:49	0759a445-4916-44c6-a63e-f774209c10da	500	 Query was already executed: review.findOneAndUpdate({ _id: '6468ae3c06a8a10d11b36565' },...
+20230523	17:22:15	2d7d0ba1-c039-4a55-8235-f0df535f0d0a	404	 No document found with id 6468ae3c06a8a10d11b36565!!
+20230523	17:26:02	0816d720-81dc-4db6-b358-77ac2178d1f8	500	 Query was already executed: review.findOneAndUpdate({ _id: '646ca780767bb2c0adf9fa41' },...
+20230524	13:22:51	71d31a44-db5b-466b-b0a1-85b8a8e34331	500	 Query was already executed: review.findOne({ _id: '646ca780767bb2c0adf9fa41' })
+20230524	13:40:43	a7815775-3371-4466-b21e-04dfde080d49	500	 Query was already executed: review.findOne({ _id: '646ca780767bb2c0adf9fa41' })
+20230524	14:27:16	0dbd349a-335c-49f7-ae8e-e69aff32e5c0	500	 Query was already executed: review.findOne({ _id: '646ca780767bb2c0adf9fa41' })
+20230524	14:28:47	7efee83b-b308-4f08-8efe-8c02481c5da9	500	 Query was already executed: review.findOne({ _id: '646ca780767bb2c0adf9fa41' })
+20230524	14:31:53	4640320e-cb55-4c41-99f4-da93358fbf5b	500	 Query was already executed: review.findOne({ _id: '646ca780767bb2c0adf9fa41' })
+20230524	14:42:52	51d018b9-5584-4ebf-be41-e8ac1d80196c	500	 Cannot read properties of undefined (reading 'constructor')
+20230524	14:44:12	7c3a1eef-235f-4b04-8d12-758d4c406cea	500	 Cannot read properties of undefined (reading 'constructor')
+20230524	14:50:58	c1ce2d87-cba9-4c13-8b79-52755868e631	500	 Cannot read properties of undefined (reading 'constructor')
+20230524	14:58:20	37f93147-54af-4878-afd2-42cf693cffde	500	 Cannot read properties of undefined (reading 'constructor')
+20230524	15:45:34	4d488d38-be82-4a04-ac4f-4fb513386849	500	 Cannot read properties of null (reading 'constructor')
+20230524	15:45:48	16f8155b-303e-4597-b64e-06096a0d9183	500	 Cannot read properties of null (reading 'constructor')
+20230524	16:53:38	3bfd2bc4-0b79-47bb-a4e3-0e9687a3f21c	500	 E11000 duplicate key error collection: natours.reviews index: tour_1_user_1 dup key: { tour: ObjectId('646c8513c0407cfa91fb5306'), user: ObjectId('5c8a211f2f8fb814b56fa188') }
+20230524	22:36:30	40c0acd5-0742-4d24-a93b-43dce170a1a3	404	 Can't find /api/v1/tours/distances/33.98747244545238,%20-118.2017171232529/unit/mi on this server
+20230524	22:38:50	3bae3201-6a9e-4f66-9989-cb9b107ea0ed	404	 Can't find /api/v1/tours/distances/33.98747244545238,%20-118.2017171232529/unit/mi on this server
+20230524	22:39:46	c854e946-3d55-419c-866e-366639555c12	500	 $geoNear is only valid as the first stage in an optimized pipeline
+20230524	22:40:24	4ccf1848-4964-479e-8605-2e66438e5b0a	500	 $geoNear requires a 2d or 2dsphere index, but none were found
+20230524	22:51:38	d7b7576e-5809-4f3c-aa7c-f326dda700e4	500	 distanceOfTours is not defined
