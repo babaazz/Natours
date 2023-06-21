@@ -646,3 +646,10 @@
 20230524	22:40:24	4fe87144-0b22-47fb-bb10-4525b7fed48f	GET	undefined	/api/v1/tours/distances/33.98747244545238,%20-118.2017171232529/unit/mi
 20230524	22:51:38	061dfac4-1439-4cd1-92b7-9d312557d098	GET	undefined	/api/v1/tours/distances/33.98747244545238,%20-118.2017171232529/unit/mi
 20230524	22:52:10	25618e6f-cd62-4550-ae31-10b75d9bac07	GET	undefined	/api/v1/tours/distances/33.98747244545238,%20-118.2017171232529/unit/mi
+20230525	15:07:46	8a91183d-206b-452f-8a95-40f7d97345f0	POST	undefined	/api/v1/users/signIn
+20230525	15:08:08	8f92a194-9b21-44de-b4c0-6af491f32e9c	POST	undefined	/api/v1/users/signIn
+20230525	15:08:48	748461ff-a8da-42b6-ae82-534444475b8e	POST	undefined	/api/v1/users/signIn
+20230525	15:10:07	ca7dab2c-bd79-4b44-80f7-37c6180a06bf	POST	undefined	/api/v1/users/signIn
+20230525	15:14:12	64b9dde6-f660-4280-8ee9-7dd7451f093c	POST	undefined	/api/v1/users/signIn
+20230525	15:14:34	d6c83320-92ca-4257-bb8c-0a6fe8f02d14	POST	undefined	/api/v1/users/signIn
+20230613	15:49:17	935c755d-00b5-41ae-83a3-9793f5c275a2	POST	undefined	/api/v1/users/signIn

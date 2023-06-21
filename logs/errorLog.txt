@@ -173,3 +173,8 @@
 20230524	22:39:46	c854e946-3d55-419c-866e-366639555c12	500	 $geoNear is only valid as the first stage in an optimized pipeline
 20230524	22:40:24	4ccf1848-4964-479e-8605-2e66438e5b0a	500	 $geoNear requires a 2d or 2dsphere index, but none were found
 20230524	22:51:38	d7b7576e-5809-4f3c-aa7c-f326dda700e4	500	 distanceOfTours is not defined
+20230525	15:07:46	839382a0-fed6-4096-b6e0-92101631f2b5	401	 Email or password is incorrect
+20230525	15:08:08	a48a4c06-7498-4602-b9d5-495967807ba9	400	 Unexpected token 'e', ..."ssword": test1234
+}" is not valid JSON
+20230525	15:08:49	31ccb32e-4b3d-4e5c-bfe5-721606cd70bf	401	 Email or password is incorrect
+20230525	15:10:07	7435c2de-4727-4819-a486-817ad494626d	401	 Email or password is incorrect

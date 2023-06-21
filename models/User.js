@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
       validator: function (value) {
         return value === this.password;
       },
-      message: "Password doesn't match",
+      message: "Password and confirmed password don't match",
     },
   },
   passwordChangedAt: Date,
@@ -60,7 +60,7 @@ userSchema.methods.passwordIsMatched = async function (
 
 userSchema.methods.isPasswordChangedAfterLastLogin = function (jwtTimeStamp) {
   if (this.passwordChangedAt) {
-    const passwordChangedAt = parseInt(this.passwordChangedAt.getTime() / 1000);
+    const passwordChangedAt = parseInt(this.passwordChangedAt.getTime()) / 1000;
     return passwordChangedAt > jwtTimeStamp;
   }
   return false;
