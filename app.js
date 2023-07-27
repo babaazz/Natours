@@ -14,6 +14,7 @@ const { logger } = require("./middlewares/logger");
 const toursRouter = require("./routes/toursRoutes");
 const usersRouter = require("./routes/usersRoutes");
 const reviewsRouter = require("./routes/reviewsRoutes");
+const viewsRouter = require("./routes/viewsRoute");
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
@@ -22,10 +23,18 @@ const globalErrorHandler = require("./middlewares/globalErrorHandler");
 
 const app = express();
 
+//Setting Up the template engine
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
 // GlobalMiddlewares
 
 // Middleware for logging request data
 app.use(logger);
+
+// Middleware for setting up static resource destination
+app.use(express.static(path.join(__dirname, "public")));
 
 // Middleware for writing security http headers
 app.use(helmet());
@@ -66,11 +75,12 @@ const limiter = rateLimit({
 // Cors Middleware
 app.use(cors());
 
-// Middleware for setting up static resource destination
-app.use("/assets", express.static(path.join(__dirname, "public/assets")));
-
 app.use("/api", limiter);
+
 //Routes
+
+app.use("/", viewsRouter);
+
 //Tours Routes
 app.use("/api/v1/tours", toursRouter);
 

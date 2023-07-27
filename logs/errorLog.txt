@@ -178,3 +178,242 @@
 }" is not valid JSON
 20230525	15:08:49	31ccb32e-4b3d-4e5c-bfe5-721606cd70bf	401	 Email or password is incorrect
 20230525	15:10:07	7435c2de-4727-4819-a486-817ad494626d	401	 Email or password is incorrect
+20230718	18:25:07	eaf58ebc-65cf-41a9-9c6f-c685d6268055	404	 Can't find /favicon.ico on this server
+20230718	18:37:59	9dd71c48-0209-4b69-abba-f42453cf7a01	404	 Can't find /css/style.css on this server
+20230718	18:38:41	8cf766e9-51e2-4894-9549-5ec1265a6da7	404	 Can't find /css/style.css on this server
+20230718	18:40:32	082d8678-08cc-4fa9-b89e-cf3a29e6be7e	404	 Can't find /css/style.css on this server
+20230718	18:40:33	dca3a8bd-dc9c-4901-a351-19204e374747	404	 Can't find /img/favicon.png on this server
+20230718	18:40:58	dc128cbe-c912-4580-aaf5-d813556417f7	404	 Can't find /css/style.css on this server
+20230718	18:42:19	5f11e05c-0666-479b-adeb-f6fd40ef20e6	404	 Can't find /css/style.css on this server
+20230718	18:42:59	e1a42a43-2d80-4a9b-8162-b2f0535e7d99	404	 Can't find /css/style.css on this server
+20230718	18:47:17	68de046e-5f9e-492e-aa52-01273afa0ed7	404	 Can't find /css/style.css on this server
+20230718	18:51:34	435784c6-2c29-48bc-8adf-01127480da6c	404	 Can't find /css/style.css on this server
+20230719	21:55:58	fef4e33c-7201-4d3e-b7c2-53e230b1ee8e	404	 Can't find /img/user.jpg on this server
+20230719	21:57:33	d16a5881-b3ea-49ed-90bf-4b817f1c12de	404	 Can't find /img/user.jpg on this server
+20230720	10:55:20	5b81011b-5681-418c-be3b-a9c692023026	500	 /home/baba_sunilo/programming/Natours/views/base.pug:49:9
+    47|       
+    48|       p.footer__copyright 
+  > 49|         &copy; by Sunil Chauhan. All rights reserved.
+----------------^
+    50| 
+    51|     
+    52| 
+
+unexpected text "&copy"
+20230720	10:55:20	77c75dc2-1afe-42ee-9e1a-7fbf05c6623f	404	 Can't find /favicon.ico on this server
+20230720	10:56:00	dfb6d522-1155-4ed7-bbc3-15f6e72c5b3c	500	 /home/baba_sunilo/programming/Natours/views/base.pug:49:9
+    47|       
+    48|       p.footer__copyright 
+  > 49|         &copy; by Sunil Chauhan. All rights reserved.
+----------------^
+    50| 
+    51|     
+    52| 
+
+unexpected text "&copy"
+20230720	10:57:25	1419b55d-5c02-4589-a175-9f26e2f9d1d3	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	10:58:27	e96590da-82a8-4761-ae8b-e609e33eba10	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	10:59:10	aee4619c-a7d9-409d-a7fd-7334f59e76c6	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	10:59:11	b62491e2-fd16-4c7e-a9b1-d6bbd334e3a3	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:00:58	53ba9103-ce96-4835-b323-43b9b39c8088	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:01:19	d5ab9b1f-5021-4219-8fdf-59ba6ca80292	500	 /home/baba_sunilo/programming/Natours/views/base.pug:57:1
+    55| 
+    56| 
+  > 57|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:02:23	814e6070-212f-4731-8589-db27168422b7	500	 /home/baba_sunilo/programming/Natours/views/base.pug:53:1
+    51| 
+    52| 
+  > 53|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:03:42	aa808834-990d-405f-a566-eaa4c5e224c5	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:04:07	e055ce93-a3f2-4387-8714-f0a6a015c735	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:04:34	6dded4a7-5198-4149-8358-c4669df5832c	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:04:50	e3a2b84b-b70c-4419-9024-8caec82a77b0	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:05:18	08592a51-6c36-41df-8007-1c5d2768cfbd	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:05:41	4aa79d12-1acb-42d6-a98b-d87784b65566	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:05:42	6b9206f2-30d8-4261-9ea5-ad067993af74	500	 /home/baba_sunilo/programming/Natours/views/base.pug:62:1
+    60| 
+    61| 
+  > 62|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:07:55	531f6539-7c7e-4031-9967-96864892e955	500	 /home/baba_sunilo/programming/Natours/views/base.pug:61:1
+    59| 
+    60| 
+  > 61|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:08	26440d98-96df-4433-85bc-7ff68100362a	500	 /home/baba_sunilo/programming/Natours/views/base.pug:61:1
+    59| 
+    60| 
+  > 61|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:22	8cd7098f-468a-4f29-8e70-934099db4797	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:23	091411be-eae5-4987-8d5f-d0d53700c930	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:27	12faec57-668a-41f9-88fa-6d25a695fb17	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:39	d2281ac5-6f72-4d02-9776-54eddc32fa60	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:40	3c73d2e5-935b-47c1-a859-60ac42ae83a8	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:47	e7ba0bb1-9ffd-49f8-bb2f-74ae9535a9e5	500	 /home/baba_sunilo/programming/Natours/views/base.pug:44:1
+    42| 
+    43| 
+  > 44|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:48	0776a425-515c-45e7-af50-146c9ab9305e	500	 /home/baba_sunilo/programming/Natours/views/base.pug:44:1
+    42| 
+    43| 
+  > 44|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:08:57	f733b969-c52c-4082-8f25-5bf0c45716a2	500	 /home/baba_sunilo/programming/Natours/views/base.pug:44:1
+    42| 
+    43| 
+  > 44|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:09:29	ff1908cd-f9ee-4441-9530-109ae73c14b2	500	 /home/baba_sunilo/programming/Natours/views/base.pug:45:1
+    43| 
+    44| 
+  > 45|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:10:52	2b2a3718-1b12-4539-8a98-8c5a9a8a9806	500	 /home/baba_sunilo/programming/Natours/views/base.pug:42:1
+    40| 
+    41| 
+  > 42|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230720	11:10:52	d1b7ee18-0148-49ae-b652-456035f20201	404	 Can't find /favicon.ico on this server
+20230720	11:11:28	f3e32234-2cb1-4b22-9321-035b1d1ad2a5	500	 /home/baba_sunilo/programming/Natours/views/base.pug:2:1
+    1|   doctype html
+  > 2|   html 
+-------^
+    3|     head
+    4|       meta(charset="UTF-8")
+    5|       meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+unexpected token "indent"
+20230720	16:08:37	d01abb73-1652-4e6e-88a7-2081057878b7	500	 /home/baba_sunilo/programming/Natours/views/base.pug:23:1
+    21| 
+    22| 
+  > 23|    
+--------^
+
+Inconsistent indentation. Expecting either 2 or 4 spaces/tabs.
+20230720	16:09:07	ba7b32c2-00e9-47ed-ac9d-0ff919c11735	500	 ENOENT: no such file or directory, open '/home/baba_sunilo/programming/Natours/views/_header.pug'
+    at /home/baba_sunilo/programming/Natours/views/base.pug line 13
+20230726	17:51:32	25272a9a-22fe-4367-9964-17f04999d5a4	404	 Can't find /overview on this server
+20230726	17:51:32	4c4b7296-786a-496d-9705-738efdaa32c6	404	 Can't find /favicon.ico on this server
+20230726	19:16:50	1f2e6629-56bd-4177-a73f-6b08d57c9372	404	 Can't find /img/tour-1-cover.jpg on this server
+20230726	22:12:37	4e03ea8a-bd15-413e-a3bf-25394e4a0d6b	404	 Can't find /img/tour-1-cover.jpg on this server
+20230727	10:20:14	787ed28b-b67b-4dd6-afec-b03f30a11870	404	 Can't find /img/tour-1-cover.jpg on this server
