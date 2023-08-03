@@ -538,3 +538,5 @@ Mixin reviewCard declared without body
 20230728	14:45:21	c7dc86d5-0b74-4ca2-abb5-f3af6095cfc9	404	 Can't find /img/tour-5-2.jpg on this server
 20230728	14:45:21	4b205cc2-fadb-4aaa-b581-718d8886c2e2	404	 Can't find /img/tour-5-1.jpg on this server
 20230728	14:51:07	6c4d4299-b48c-4625-bba8-b25ddcdd61f1	404	 Can't find /img/tour-7-cover.jpg on this server
+20230803	12:50:09	ed32f919-e19b-48af-95e9-f61420ccd0e1	404	 Can't find /tour/ on this server
+20230803	12:50:09	562b825f-82a1-4931-9690-e95424cab6bb	404	 Can't find /favicon.ico on this server
