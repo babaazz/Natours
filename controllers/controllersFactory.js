@@ -13,7 +13,7 @@ const deleteOne = (Model) =>
 
     res.status(204).json({
       status: "Success",
-      message: `tour has been deleted`,
+      message: `Doc has been deleted`,
     });
   });
 
