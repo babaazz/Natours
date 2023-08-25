@@ -540,3 +540,64 @@ Mixin reviewCard declared without body
 20230728	14:51:07	6c4d4299-b48c-4625-bba8-b25ddcdd61f1	404	 Can't find /img/tour-7-cover.jpg on this server
 20230803	12:50:09	ed32f919-e19b-48af-95e9-f61420ccd0e1	404	 Can't find /tour/ on this server
 20230803	12:50:09	562b825f-82a1-4931-9690-e95424cab6bb	404	 Can't find /favicon.ico on this server
+20230814	20:32:52	d627af1f-4452-41b3-9d4c-c62a0efd4664	401	 User not logged in.
+20230814	20:36:31	66ef8de5-1143-42a9-ada4-d177f57bcf17	401	 Email or password is incorrect
+20230814	20:37:56	df691c8f-a53e-4b4f-9fd6-a4bfc7a2c703	401	 Email or password is incorrect
+20230815	20:06:15	560d8d36-3f61-4da5-a962-702b3a6f2ce1	401	 User not logged in.
+20230815	20:06:15	40ca7f6a-537e-440e-be64-37bafa1f1dba	404	 Can't find /favicon.ico on this server
+20230815	20:06:55	bf47c9b6-328a-466c-a0f5-f3a5a423d17e	500	 Cannot read properties of undefined (reading 'split')
+20230817	20:48:10	568b6963-eb3e-45ed-88a0-f38d3619306c	500	 token is not defined
+20230817	20:49:30	8f0bb0c1-1984-49f9-845d-e487617329c2	500	 Cannot set properties of undefined (setting 'user')
+20230817	20:56:03	60267ec9-b41b-479c-bbb8-edd806ad464d	500	 Cannot set properties of undefined (setting 'user')
+20230817	20:56:23	e67bc445-516e-4266-a17c-00709648ec23	404	 Can't find / on this server
+20230817	20:59:53	49e46583-59c7-4978-b67d-6542607e44d0	404	 Can't find / on this server
+20230817	21:04:09	69a7e696-6704-47e0-aaa5-24e2c2076dfe	404	 Can't find / on this server
+20230819	09:40:14	f19bbfc2-026a-4ba6-b4f7-578cfcf2b469	401	 Email or password is incorrect
+20230819	11:37:04	fc84ea9f-476b-4f84-a918-ddfc269f6f1f	401	 Email or password is incorrect
+20230819	11:37:13	83c1f969-61e4-410f-bbf6-43a64d7ac561	401	 Email or password is incorrect
+20230819	11:38:34	374ad911-13e7-493a-bc79-bdc724302935	401	 Email or password is incorrect
+20230819	12:16:42	98add374-662e-40f6-a99d-8f9db44ef070	401	 Email or password is incorrect
+20230819	19:55:56	928e4972-1f71-4abf-8a27-efdc5edd039a	401	 Email or password is incorrect
+20230820	17:52:46	4b4d0b4a-ce57-49af-aa23-6ab77ade0a4a	500	 /home/baba_sunilo/programming/Natours/views/tour.pug:99:1
+    97|         button.btn.btn--green.span-all-rows Book tour now!
+    98| 
+  > 99|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230820	17:53:04	9576569b-5d7f-4ddd-95a3-4b9f68763a64	404	 Can't find /bundle.js.map on this server
+20230820	17:53:12	dc155138-d400-4d84-a86f-5cd3303bd196	404	 Can't find /bundle.js.map on this server
+20230820	17:59:40	bfa52459-b750-4429-8649-056f2cdee17e	404	 Can't find /bundle.js.map on this server
+20230820	18:03:01	ca7856d7-43e2-4265-957e-2ef0227692a8	404	 Can't find /bundle.js.map on this server
+20230820	18:03:21	45cdbff1-cd3d-4cf5-a1db-b3929a664dcb	404	 Can't find /bundle.js.map on this server
+20230820	18:03:35	d3d0b4b9-9dbd-4f46-9582-1c13b7d3cad0	404	 Can't find /bundle.js.map on this server
+20230820	18:04:46	af27ad38-3755-4977-a445-488bd9abc6d4	500	 /home/baba_sunilo/programming/Natours/views/tour.pug:99:1
+    97|         button.btn.btn--green.span-all-rows Book tour now!
+    98| 
+  > 99|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230820	20:22:40	e6ba32e0-e66c-4c34-8002-15650deab5d4	404	 Can't find /bundle.js.map on this server
+20230820	20:22:54	5fb6f536-a351-42f3-a81b-e45c9685fadd	404	 Can't find /bundle.js.map on this server
+20230820	20:23:07	70ee4217-5aa1-406c-aa7c-8852511a9d00	404	 Can't find /bundle.js.map on this server
+20230820	20:23:23	4f6b82d4-a60e-4e1a-a2ba-f4edd2bda667	404	 Can't find /bundle.js.map on this server
+20230820	20:23:27	20d1db10-e1ff-4b13-8410-9ade0a8c5de0	404	 Can't find /bundle.js.map on this server
+20230820	20:24:09	c9698bca-0206-4f6b-85bf-c8deb4607110	404	 Can't find /bundle.js.map on this server
+20230820	20:41:22	9f20d34f-c53b-450c-b3a1-cd9fd8e54d1b	404	 Can't find /bundle.js.map on this server
+20230820	20:41:26	23cc61c0-acca-49ca-8181-8f952229ebbe	404	 Can't find /bundle.js.map on this server
+20230820	20:41:43	15158a8e-084f-4ba5-aaf2-9c1bff6d2510	404	 Can't find /bundle.js.map on this server
+20230821	10:36:29	46ea44df-66c7-4344-bbad-667245290416	404	 Can't find /bundle.js.map on this server
+20230821	10:36:36	2836916c-025b-40e3-9605-b45a38d02a1d	404	 Can't find /bundle.js.map on this server
+20230821	10:36:49	76fb4e23-b02e-4045-a381-2219a190dd03	400	 Please provide email and password
+20230821	10:38:35	e1ba4797-70d9-4b28-a939-14adb86814d1	404	 Can't find /bundle.js.map on this server
+20230821	10:38:42	8e1b6c12-1fb4-486a-adcf-1c7412c7c799	404	 Can't find /bundle.js.map on this server
+20230821	10:38:53	ee1dfa07-3db9-462a-84d0-4351b4752570	404	 Can't find /bundle.js.map on this server
+20230821	10:39:04	246f1ac4-9c3e-4a0c-8083-e3073bbc9548	500	 /home/baba_sunilo/programming/Natours/views/tour.pug:99:1
+    97|         button.btn.btn--green.span-all-rows Book tour now!
+    98| 
+  > 99|  
+--------^
+
+Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
+20230821	10:40:21	a6887e77-4578-47e2-ad60-51ba59979182	404	 Can't find /bundle.js.map on this server

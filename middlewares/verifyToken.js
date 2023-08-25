@@ -6,10 +6,15 @@ const AppError = require("../utils/appError");
 
 const verifyToken = catchAsync(async (req, res, next) => {
   const authHeader = req.headers.authorization || req.headers.Authorization;
-  if (!authHeader?.startsWith("Bearer ")) {
+  const cookies = req.cookies;
+
+  if (authHeader?.startsWith("Bearer ")) {
+    token = authHeader.split(" ")[1];
+  } else if (cookies.jwt) {
+    token = cookies.jwt;
+  } else {
     throw new AppError("User not logged in.", 401);
   }
-  const token = authHeader.split(" ")[1];
 
   const decoded = await promisify(jwt.verify)(
     token,

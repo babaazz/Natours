@@ -21,7 +21,6 @@ const dbUri = process.env.LOCAL_DATABASE_URI;
 const tours = JSON.parse(
   fs.readFileSync(path.join(__dirname, "tours.json"), "utf-8")
 );
-console.log(tours);
 
 const users = JSON.parse(
   fs.readFileSync(path.join(__dirname, "users.json"), "utf-8")
