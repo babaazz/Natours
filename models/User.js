@@ -69,7 +69,8 @@ userSchema.methods.passwordIsMatched = async function (
 
 userSchema.methods.isPasswordChangedAfterLastLogin = function (jwtTimeStamp) {
   if (this.passwordChangedAt) {
-    const passwordChangedAt = parseInt(this.passwordChangedAt.getTime()) / 1000;
+    const passwordChangedAt =
+      parseInt(this.passwordChangedAt.getTime() / 1000) - 1;
     return passwordChangedAt > jwtTimeStamp;
   }
   return false;
@@ -93,12 +94,12 @@ userSchema.pre("save", function (next) {
   next();
 });
 
-// userSchema.pre("save", async function (next) {
-//   if (!this.isModified("password")) return next();
-//   this.password = await bcrypt.hash(this.password, 12);
-//   this.confirmPassword = undefined;
-//   next();
-// });
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
+  this.password = await bcrypt.hash(this.password, 12);
+  this.confirmPassword = undefined;
+  next();
+});
 
 userSchema.pre(/^find/, function (next) {
   this.find({ active: { $ne: false } });

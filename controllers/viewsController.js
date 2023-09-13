@@ -1,4 +1,6 @@
 const Tour = require("../models/Tour");
+const User = require("../models/User");
+const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 exports.getOverview = catchAsync(async (req, res, next) => {
@@ -16,6 +18,10 @@ exports.getTour = catchAsync(async (req, res, next) => {
     path: "reviews",
     fields: "review rating user",
   });
+
+  if (!tour) {
+    throw new AppError("No tour exists with this name", 400);
+  }
 
   res
     .status(200)
@@ -40,3 +46,29 @@ exports.login = (req, res) => {
       title: "Natours | Login",
     });
 };
+
+exports.getAccount = (req, res) => {
+  res.status(200).render("account", {
+    title: "Natours | Your account",
+  });
+};
+
+exports.updateUserData = catchAsync(async (req, res, next) => {
+  const updatedUser = await User.findByIdAndUpdate(
+    req.user.id,
+    {
+      name: req.body.name,
+      email: req.body.email,
+    },
+    {
+      new: true,
+
+      runValidators: true,
+    }
+  );
+
+  res.status(200).render("account", {
+    title: "Your account",
+    user: updatedUser,
+  });
+});

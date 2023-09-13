@@ -24,27 +24,45 @@ const handleTokenExpiredErr = () =>
 const handleInvalidTokenErr = () =>
   new AppError("Invalid Token !! Please login again", 401);
 
-const sendErrorDev = (err, res) => {
-  res.status(err.statusCode).json({
-    status: err.status,
-    name: err.name,
-    message: err.message,
-    stack: err.stack,
+const sendErrorDev = (err, req, res) => {
+  if (req.originalUrl.startsWith("/api")) {
+    return res.status(err.statusCode).json({
+      status: err.status,
+      name: err.name,
+      message: err.message,
+      stack: err.stack,
+    });
+  }
+  return res.status(err.statusCode).render("error", {
+    title: "Ooops something went wrong",
+    msg: err.message,
   });
 };
 
-const sendErrorProd = (err, res) => {
-  if (err.isOperational) {
-    res.status(err.statusCode).json({
-      status: err.status,
-      message: err.message,
-    });
-  } else {
-    res.status(500).json({
+const sendErrorProd = (err, req, res) => {
+  if (req.originalUrl.startsWith("/api")) {
+    if (err.isOperational) {
+      return res.status(err.statusCode).json({
+        status: err.status,
+        message: err.message,
+      });
+    }
+    return res.status(500).json({
       status: err.status,
       message: "Opps something went wrong",
     });
   }
+
+  if (err.isOperational) {
+    return res.status(err.statusCode).render("error", {
+      title: "Ooops something went wrong",
+      msg: err.message,
+    });
+  }
+  return res.status(500).render("error", {
+    title: "Something went wrong",
+    msg: "Please try again",
+  });
 };
 
 module.exports = (err, req, res, next) => {
@@ -55,7 +73,7 @@ module.exports = (err, req, res, next) => {
   logEvents(errorLogMessage, "errorLog.txt");
 
   if (process.env.NODE_ENV === "development") {
-    sendErrorDev(err, res);
+    sendErrorDev(err, req, res);
   } else if (process.env.NODE_ENV === "production") {
     let error = Object.create(err, Object.getOwnPropertyDescriptors(err));
 
@@ -65,6 +83,6 @@ module.exports = (err, req, res, next) => {
     if (error.name === "JsonWebTokenError") error = handleInvalidTokenErr();
     if (error.name === "TokenExpiredError") error = handleTokenExpiredErr();
 
-    sendErrorProd(error, res);
+    sendErrorProd(error, req, res);
   }
 };
