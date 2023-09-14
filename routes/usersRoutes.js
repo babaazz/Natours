@@ -3,6 +3,8 @@ const usersController = require("../controllers/usersController");
 const authController = require("../controllers/authController");
 const verifyToken = require("../middlewares/verifyToken");
 const restrictActionTo = require("../middlewares/restrictActionTo");
+const { uploadUserPhoto } = require("../middlewares/multerConfig");
+const { resizeUserPhoto } = require("../middlewares/imgProcessing");
 
 const router = express.Router();
 
@@ -22,7 +24,12 @@ router.use(verifyToken);
 
 router.get("/me", usersController.getMe, usersController.getUser);
 
-router.patch("/updateMe", usersController.updateMe);
+router.patch(
+  "/updateMe",
+  uploadUserPhoto,
+  resizeUserPhoto,
+  usersController.updateMe
+);
 
 router.delete("/deleteMe", usersController.deleteMe);
 

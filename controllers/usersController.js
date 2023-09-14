@@ -21,7 +21,10 @@ const updateMe = catchAsync(async (req, res, next) => {
     throw new AppError("This isn't route for password change", 400);
   }
 
-  const filteredBody = filterObj(req.body, "name", "email", "photo");
+  const filteredBody = filterObj(req.body, "name", "email");
+
+  if (req.file) filteredBody.photo = req.file.filename;
+
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
     runValidators: true,

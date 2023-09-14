@@ -899,3 +899,10 @@ Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
 20230913	19:30:20	b2ea66ab-29c1-47cb-b274-923563f59d3e	404	 Can't find /bundle.js.map on this server
 20230913	19:30:23	3fa93705-8456-4971-8eed-320895f19829	404	 Can't find /bundle.js.map on this server
 20230913	19:30:28	852f52b3-3d90-4b0d-84b3-4babc72fc78e	404	 Can't find /bundle.js.map on this server
+20230914	16:50:30	c91007bb-c54d-4651-9470-9ee8c804a171	401	 Email or password is incorrect
+20230914	16:50:47	be942962-d31c-477d-90ea-3e615e668fe0	401	 Email or password is incorrect
+20230914	18:07:01	884c8042-4560-44bb-877c-c02068a06657	500	 Unexpected field
+20230914	18:37:18	7ffd6191-c640-4995-92d7-8b8acaa39b5e	500	 jwt expired
+20230914	19:28:19	c40bf943-ed61-4b29-b70a-dc85f712ddd5	500	 jwt expired
+20230914	19:30:40	0e075e93-12ad-4617-b41c-4708e47e7293	500	 jwt malformed
+20230914	19:31:20	7a9dea55-2521-4004-89ec-31fcfeb69713	500	 jwt expired
