@@ -2,7 +2,7 @@ const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
 const jwt = require("jsonwebtoken");
 const AppError = require("../utils/appError");
-const sendEmail = require("../utils/sendEmail");
+const Email = require("../utils/sendEmail");
 const crypto = require("crypto");
 
 const createJwtToken = (payLoad) => {
@@ -46,6 +46,16 @@ const signUp = catchAsync(async (req, res, next) => {
     role,
   });
 
+  try {
+    const myEmail = new Email(
+      newUser,
+      `${req.protocol}://${req.get("host")}/me`
+    );
+    await myEmail.sendWelcome();
+  } catch (error) {
+    throw new AppError("There was an error sending email", 500);
+  }
+
   createAndSendToken(newUser, 201, res);
 });
 
@@ -87,7 +97,7 @@ const forgotPassword = catchAsync(async (req, res, next) => {
   const message = `Forgot password? Click the link below to reset your password. \n\n ${resetURL} \n\n Ignore this email if you haven't initiated password reset`;
 
   try {
-    await sendEmail({ message, email, subject: "Reset Password" });
+    await new Email(user, resetURL).sendPasswordResetEmail();
 
     res.status(200).json({
       status: "Success",

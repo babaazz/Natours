@@ -3,6 +3,8 @@ const toursController = require("../controllers/toursController");
 const reviewsRouter = require("./reviewsRoutes");
 const verifyToken = require("../middlewares/verifyToken");
 const restrictActionTo = require("../middlewares/restrictActionTo");
+const { uploadTourPhotos } = require("../middlewares/multerConfig");
+const { resizeTourPhotos } = require("../middlewares/imgProcessing");
 
 const router = express.Router();
 
@@ -57,6 +59,8 @@ router
   .patch(
     verifyToken,
     restrictActionTo("lead-guide", "admin"),
+    uploadTourPhotos,
+    resizeTourPhotos,
     toursController.updateTour
   )
   .delete(

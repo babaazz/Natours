@@ -906,3 +906,32 @@ Inconsistent indentation. Expecting either 0 or 2 spaces/tabs.
 20230914	19:28:19	c40bf943-ed61-4b29-b70a-dc85f712ddd5	500	 jwt expired
 20230914	19:30:40	0e075e93-12ad-4617-b41c-4708e47e7293	500	 jwt malformed
 20230914	19:31:20	7a9dea55-2521-4004-89ec-31fcfeb69713	500	 jwt expired
+20230914	20:28:33	e4d93cc2-1b9a-4788-b267-9511bd2fab5a	500	 Cannot set properties of undefined (setting 'filename')
+20230914	20:29:01	638bd69d-d950-461c-90e9-9b4d921287b5	500	 Cannot set properties of undefined (setting 'filename')
+20230914	20:31:04	9fb62ab1-7fff-4b0a-a325-d8bb9346f9cb	500	 Cannot set properties of undefined (setting 'filename')
+20230914	20:32:35	0963d6ca-de04-4f98-99f7-d2e13b433d9a	404	 Can't find /bundle.js.map on this server
+20230914	20:32:42	3a49e298-3d9d-4ed0-9d64-b4cb9c067da4	404	 Can't find /bundle.js.map on this server
+20230927	21:53:01	db0edad7-9c84-41bb-bfca-a5288ecb1440	401	 Email or password is incorrect
+20230927	21:54:52	6ce72a3a-3182-42d6-8a87-0abcf9926945	401	 Email or password is incorrect
+20231013	11:19:51	9343574b-1ec7-4f85-baab-e5e03889a114	404	 No document found with id 646c8513c0407cfa91fb5306!!
+20231013	11:22:47	296374f6-b03e-4c1d-b93c-759b087b0e8d	500	 E11000 duplicate key error collection: natours.tours index: _id_ dup key: { _id: ObjectId('5c88fa8cf4afda39709c295a') }
+20231013	11:25:27	70d05885-86db-44ff-aa7e-5c20cd7ba954	400	 Expected double-quoted property name in JSON at position 3398
+20231017	17:12:58	b8034a27-669c-4d17-ba86-65d4f4307d6c	401	 Email or password is incorrect
+20231017	17:15:37	fa879bc2-b47f-4303-80e1-1e4ee4de4ad3	500	 jwt malformed
+20231017	17:16:08	e324d776-0358-4535-a8cc-316d17b066d0	500	 jwt malformed
+20231017	18:05:30	91659656-ed82-49f4-ad10-38269f8acf8a	400	 Unexpected token 'e', ..."ssword": test1234,
+ "... is not valid JSON
+20231017	18:07:06	9e44de94-7d3b-4d4b-86b3-1861d02e9231	500	 user validation failed: password: A passowrd must contain an uppercase letter, a lowercase, a special character and a number
+20231018	12:52:21	1006a7da-d9c1-4fa8-a330-f88811ce2a7a	401	 User not logged in.
+20231019	10:45:42	87117630-e4fb-4317-b1e4-edf98840f03d	404	 There is no user with this email
+20231019	10:56:51	dbf4d6b0-9024-4358-a598-d8188949b930	500	 There was an error sending the email
+20231019	11:39:55	6deefa86-c512-416b-b44c-69dfd70ccbbb	401	 Email or password is incorrect
+20231025	12:27:45	b987f1b0-1241-4618-84e9-633324755515	500	 Cannot read properties of undefined (reading 'create')
+20231025	12:31:30	29707105-6324-48a8-9634-5a7532bd5ca8	401	 You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY'). See https://stripe.com/docs/api#authentication for details, or we can help at https://support.stripe.com/.
+20231025	13:25:09	e743a92e-5023-47f6-a56e-046f5ff5390d	401	 User not logged in.
+20231025	13:25:20	4918991a-cbf7-41cb-88a7-b2309f44464c	401	 You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY'). See https://stripe.com/docs/api#authentication for details, or we can help at https://support.stripe.com/.
+20231025	13:31:50	21954c7e-7d90-4d5b-a0fd-469cccb3383d	401	 You did not provide an API key. You need to provide your API key in the Authorization header, using Bearer auth (e.g. 'Authorization: Bearer YOUR_SECRET_KEY'). See https://stripe.com/docs/api#authentication for details, or we can help at https://support.stripe.com/.
+20231025	13:34:07	576b378a-5ff4-4607-8a49-0e501834cc26	400	 You cannot use `line_items.amount`, `line_items.currency`, `line_items.name`, `line_items.description`, or `line_items.images` in this API version. Please use `line_items.price` or `line_items.price_data`. Please see https://stripe.com/docs/payments/checkout/migrating-prices for more information.
+20231025	13:42:48	1ef9984f-de96-4e06-acf0-161fc768ede9	400	 You may only specify one of these parameters: name, price.
+20231025	13:43:51	f133a832-9ed5-4bbf-82a7-e61477220067	400	 The `price` parameter should be the ID of a price object, rather than the literal numerical price. Please see https://stripe.com/docs/billing/prices-guide#create-prices for more information about how to set up price objects.
+20231025	13:46:06	42df9ede-5efe-4d72-bdf2-c0cd5dacf1b4	400	 The `price` parameter should be the ID of a price object, rather than the literal numerical price. Please see https://stripe.com/docs/billing/prices-guide#create-prices for more information about how to set up price objects.

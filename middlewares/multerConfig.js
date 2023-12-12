@@ -28,4 +28,9 @@ const upload = multer({
 
 const uploadUserPhoto = upload.single("photo");
 
-module.exports = { uploadUserPhoto };
+const uploadTourPhotos = upload.fields([
+  { name: "imageCover", maxCount: 1 },
+  { name: "images", maxCount: 3 },
+]);
+
+module.exports = { uploadUserPhoto, uploadTourPhotos };

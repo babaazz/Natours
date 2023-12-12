@@ -15,6 +15,7 @@ const toursRouter = require("./routes/toursRoutes");
 const usersRouter = require("./routes/usersRoutes");
 const reviewsRouter = require("./routes/reviewsRoutes");
 const viewsRouter = require("./routes/viewsRoute");
+const bookingRouter = require("./routes/bookingRoutes");
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
@@ -89,6 +90,9 @@ app.use("/api/v1/users", usersRouter);
 
 //Reviews Routes
 app.use("/api/v1/reviews", reviewsRouter);
+
+//Booking Routes
+app.use("/api/v1/bookings", bookingRouter);
 
 //Unhandled Routes
 app.all("*", (req, res, next) => {
